@@ -1,0 +1,22 @@
+{
+  "name": "contoso-kv-public-disable",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "Disable public network access for your key vault so that it's not accessible over the public internet. This can reduce data leakage risks. Learn more at: https://aka.ms/akvprivatelink.",
+    "displayName": "[Preview]: Azure Key Vault should disable public network access",
+    "notScopes": [],
+    "parameters": {
+      "effect": {
+        "value" : "Audit"
+      }
+    },
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/55615ac9-af46-4a59-874e-391cc3dfb490",
+    "scope": "${current_scope_resource_id}",
+    "enforcementMode": true
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "None"
+  }
+}

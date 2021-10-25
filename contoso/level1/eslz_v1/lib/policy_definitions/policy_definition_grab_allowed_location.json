@@ -1,0 +1,73 @@
+{
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "contoso-allowed-locations",
+  "apiVersion": "2020-09-01",
+  "properties": {
+    "displayName": "contoso allowed locations",
+    "mode": "Indexed",
+    "description": "This policy enables you to restrict the locations your organization can specify when deploying resources. Use to enforce your geo-compliance requirements. Excludes resource groups, Microsoft.AzureActiveDirectory/b2cDirectories, and resources that use the 'global' region; excluding Cognitive Service (NIST-1058)",
+    "parameters": {
+      "listOfAllowedLocations": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Allowed locations",
+          "description": "The list of locations that can be specified when deploying resources.",
+          "strongType": "location"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "location",
+            "notIn": "[parameters('listOfAllowedLocations')]"
+          },
+          {
+            "field": "location",
+            "notEquals": "global"
+          },
+          {
+            "field": "type",
+            "notEquals": "Microsoft.AzureActiveDirectory/b2cDirectories"
+          },
+          {
+            "field": "type",
+            "notEquals": "Microsoft.CognitiveServices/accounts"
+          },
+          {
+            "field": "type",
+            "notEquals": "Microsoft.Maps/accounts"
+          },
+          {
+            "allOf": [
+              {
+                "field": "type",
+                "notEquals": "Microsoft.devops"
+              },
+              {
+                "field": "location",
+                "notEquals": "East Asia"
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "field": "type",
+                "notEquals": "Microsoft.Storage"
+              },
+              {
+                "field": "location",
+                "notEquals": "West Europe"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}

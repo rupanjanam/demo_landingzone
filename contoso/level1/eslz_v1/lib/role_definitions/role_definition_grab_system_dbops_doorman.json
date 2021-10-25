@@ -1,0 +1,58 @@
+{
+    "name": "c1a47725-1549-464c-95e9-f33d714f4f0e",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-system-dbops-doorman",
+        "description": "This role is for the Doorman application in the dbops function.",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Resources/subscriptions/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.DocumentDB/databaseAccounts/read",
+                    "Microsoft.DBforMySQL/flexibleServers/read",
+                    "Microsoft.DBforMySQL/servers/read",
+                    "Microsoft.DBforMySQL/servers/configurations/read",
+                    "Microsoft.DBforMySQL/servers/databases/read",
+                    "Microsoft.DBforMySQL/servers/replicas/read",
+                    "Microsoft.DBforMySQL/servers/logFiles/read",
+                    "Microsoft.DBforPostgreSQL/flexibleServers/read",
+                    "Microsoft.DBforPostgreSQL/servers/read",
+                    "Microsoft.DBforMariaDB/servers/read",
+                    "Microsoft.Sql/servers/read",
+                    "Microsoft.Sql/managedInstances/read",
+                    "Microsoft.Network/privateEndpoints/read",
+                    "Microsoft.Network/privateLinkServices/read",
+                    "Microsoft.Network/serviceEndpointPolicies/read",
+                    "Microsoft.Network/dnszones/read",
+                    "Microsoft.Network/dnszones/all/read",
+                    "Microsoft.Network/privateDnsZones/read",
+                    "Microsoft.Network/privateDnsZones/ALL/read",
+                    "Microsoft.Network/virtualNetworks/read",
+                    "Microsoft.Network/virtualNetworks/subnets/read",
+                    "Microsoft.Network/networkInterfaces/read",
+                    "Microsoft.DBforMySQL/servers/write",
+                    "Microsoft.DBforMySQL/flexibleServers/write",
+                    "Microsoft.DBforPostgreSQL/servers/write",
+                    "Microsoft.DBforPostgreSQL/flexibleServers/write",
+                    "Microsoft.DBforMariaDB/servers/write",
+                    "Microsoft.Sql/servers/write",
+                    "Microsoft.Cache/checknameavailability/action",
+                    "Microsoft.Cache/redis/write",
+                    "Microsoft.Cache/redis/read",
+                    "Microsoft.Cache/redis/privateEndpointConnections/read",
+                    "Microsoft.Cache/redis/privateLinkResources/read",
+                    "Microsoft.Cache/redis/PrivateEndpointConnectionsApproval/action"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "${current_scope_resource_id}"
+        ]
+    }
+}

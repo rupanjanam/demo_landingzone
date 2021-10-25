@@ -1,0 +1,29 @@
+{
+    "name": "49b97f80-d05e-48dc-8182-edafa9265cb5",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-human-billing-reader",
+        "description": "This role grants all permissions required to read billing resources",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Authorization/*/read",
+                    "Microsoft.Billing/*/read",
+                    "Microsoft.Commerce/*/read",
+                    "Microsoft.Consumption/*/read",
+                    "Microsoft.Management/managementGroups/read",
+                    "Microsoft.CostManagement/*/read",
+                    "Microsoft.Support/*"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "/"
+        ]
+    }
+}

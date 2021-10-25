@@ -1,0 +1,25 @@
+{
+  "name": "5211fc84-ca2a-4458-9c89-8b4c64cfb898",
+  "type": "Microsoft.Authorization/roleDefinitions",
+  "apiVersion": "2018-01-01-preview",
+  "properties": {
+      "roleName": "contoso-system-apex-build",
+      "description": "This role is for the Conveyor application for Build Team to push image to ACR.",
+      "type": "customRole",
+      "permissions": [
+          {
+              "actions": [
+                  "Microsoft.ContainerRegistry/registries/pull/read",
+                  "Microsoft.ContainerRegistry/registries/push/write",
+                  "Microsoft.ContainerRegistry/registries/read"
+              ],
+              "notActions": [],
+              "dataActions": [],
+              "notDataActions": []
+          }
+      ],
+      "assignableScopes": [
+          "${current_scope_resource_id}"
+      ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "f821a8a4-f1e4-4823-847d-02d28a6369e2",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-system-<function>-stratus",
+        "description": "This role is for the Stratus app in the <function>.",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Authorization/*/read",
+                    "Microsoft.Billing/*/read",
+                    "Microsoft.Commerce/*/read",
+                    "Microsoft.Consumption/*/read",
+                    "Microsoft.Management/managementGroups/read",
+                    "Microsoft.CostManagement/*/read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "/"
+        ]
+    }
+}

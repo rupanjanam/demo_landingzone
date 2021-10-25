@@ -1,0 +1,23 @@
+{
+    "name": "4211fc84-ca2a-4458-9c88-7b4c64ceb898",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-system-<function>-conveyor",
+        "description": "This role is for the Conveyor application in the <function>.",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "*/Read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "/"
+        ]
+    }
+}

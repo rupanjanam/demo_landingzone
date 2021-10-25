@@ -1,0 +1,23 @@
+{
+    "name": "e0e786b6-3260-4c37-bd8a-8a02817df484",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-human-landingzone-owner",
+        "description": "This role is given to the respective Application Team who own the landing zone subscription. (Original spreadsheet name contoso-account-owner(Respective application Team)).",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "*"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "/"
+        ]
+    }
+}

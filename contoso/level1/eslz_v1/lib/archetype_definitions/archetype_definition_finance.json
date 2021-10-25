@@ -1,0 +1,31 @@
+{
+    "finance": {
+        "policy_assignments": [],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [
+            "contoso_human_billing_admin",
+            "contoso_human_billing_reader",
+            "contoso_human_dbops_nosql_reader",
+            "contoso_human_dbops-nosql-admin",
+            "contoso_human_netops-reader",
+            "contoso_human_platform_owner_reader",
+            "contoso_human_security_admin",
+            "contoso_human_security_auditor",
+            "contoso_human_security_incidentresponder",
+            "contoso_human_break_glass",
+            "contoso_human_db_rds_admin",
+            "contoso_human_db_rds_reader",
+            "contoso_human_landingzone_owner",
+            "contoso_human_landingzone_reader",
+            "contoso_human_netops-admin",
+            "contoso_system_cosmo_stratus",
+            "contoso_system_devops_conveyor",
+            "contoso_system_dbops_doorman"
+        ],
+        "archetype_config": {
+            "parameters": {},
+            "access_control": {}
+        }
+    }
+}

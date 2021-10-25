@@ -1,0 +1,17 @@
+{
+  "name": "contoso-storage-soft-del",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "Protect your Storage Blobs or Containers from accidental or malicious deletions by enabling Soft Delete: https://docs.microsoft.com/azure/storage/blobs/soft-delete-container-overview?tabs=powershell",
+    "displayName": "Audit - Azure Storage Blobs and Containers should have Soft Delete enabled",
+    "notScopes": [],
+    "parameters": {},
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/contoso-storage-soft-del",
+    "scope": "${current_scope_resource_id}"
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "None"
+  }
+}

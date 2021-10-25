@@ -1,0 +1,24 @@
+{
+    "name": "beaa9396-627a-4faf-898c-e9cf6bd2eec5",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-human-platform-owner-reader",
+        "description": "This role allows the platform owner to read every resource on the platform.",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "*/Read"
+
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "/"
+        ]
+    }
+}

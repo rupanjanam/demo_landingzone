@@ -1,0 +1,33 @@
+{
+    "production": {
+        "policy_assignments": [
+            "contoso-allow-network-aks",
+            "contoso-acr-private-link",
+            "contoso-acr-RestrictNetwork",
+            "contoso-waf-frontdoor",
+            "contoso-waf-mode",
+            "contoso-aks-capability",
+            "contoso-waf-frontdoor-mode",
+            "contoso-waf-apgw",
+            "contoso-storage-public",
+            "contoso-storage-secure-tfr",
+            "contoso-storageRestrictVnet",
+            "contoso-storage-restrict",
+            "contoso-storage-arm",
+            "contoso-kv-pvt-endpoint",
+            "contoso-kv-public-disable",
+            "contoso-kv-pruge-protect",
+            "contoso-kv-soft-del"
+        ],
+        "policy_definitions": [
+        ],
+        "policy_set_definitions": [
+        ],
+        "role_definitions": [
+        ],
+        "archetype_config": {
+            "parameters": {},
+            "access_control": {}
+        }
+    }
+}

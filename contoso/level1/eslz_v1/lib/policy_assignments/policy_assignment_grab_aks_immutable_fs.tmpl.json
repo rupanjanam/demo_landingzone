@@ -1,0 +1,22 @@
+{
+  "name": "contoso-aks-readonly-pod-fs",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "This policy denies creation of Pods in AKS Clusters without readOnlyRootFilesystem 'ture' on the security context of the container's spec.",
+    "displayName": "Deny the creation of Pod in AKS without read-only root filesystem enforcement",
+    "notScopes": [],
+    "parameters": {
+      "effect": {
+        "value" : "audit"
+      }
+    },
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/df49d893-a74c-421d-bc95-c663042e5b80",
+    "scope": "${current_scope_resource_id}",
+    "enforcementMode": true
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "None"
+  }
+}

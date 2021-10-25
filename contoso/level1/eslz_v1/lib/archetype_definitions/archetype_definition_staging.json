@@ -1,0 +1,45 @@
+{
+    "staging": {
+        "policy_assignments": [
+            "contoso-allow-registry-aks",
+            "contoso-allow-network-aks",
+            "contoso-Deploy-DDoS-Protect",
+            "contoso-aks-readonly-pod-fs",
+            "contoso-aksLimitPodhostPath",
+            "contoso-aks-container-pid",
+            "contoso-akscontainer-cpumem",
+            "contoso-aks-clu-capsysadmin",
+            "contoso-aksDisableAutomount",
+            "contoso-acr-private-link",
+            "contoso-acr-RestrictNetwork",
+            "contoso-Enable-DDoS-VNET",
+            "contoso-waf-frontdoor",
+            "contoso-waf-mode",
+            "contoso-aks-capability",
+            "contoso-waf-frontdoor-mode",
+            "contoso-waf-apgw",
+            "contoso-storage-public",
+            "contoso-storage-secure-tfr",
+            "contoso-kv-pvt-endpoint",
+            "contoso-kv-public-disable",
+            "contoso-kv-pruge-protect",
+            "contoso-storageRestrictVnet",
+            "contoso-storage-restrict",
+            "contoso-storage-arm",
+            "contoso-kv-soft-del",
+            "contoso-storage-soft-del"
+        ],
+        "policy_definitions": [
+        ],
+        "policy_set_definitions": [
+        ],
+        "role_definitions": [
+        ],
+        "archetype_config": {
+            "parameters": {
+
+            },
+            "access_control": {}
+        }
+    }
+}

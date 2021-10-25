@@ -1,0 +1,26 @@
+{
+    "name": "4517ba18-7e90-4db9-ab6b-ec823614a127",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "contoso-human-db-rds-reader",
+        "description": "",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.DBforMySQL/*/Read",
+                    "Microsoft.DBforMariaDB/*/Read",
+                    "Microsoft.DBforPostgreSQL/*/Read",
+                    "Microsoft.Sql/*/Read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "/"
+        ]
+    }
+}
