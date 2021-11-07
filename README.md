@@ -45,6 +45,67 @@ Refer the code for [Azure DevOps integration](https://github.com/Azure/caf-terra
 
 The repository shared within this project covers the deployment of Enterprise scale landing-zone from levels 0 till 2 (excludes the DevOps integration).
 
+## Getting Started
+
+To start adopting your first landing zone in Azure, you will need the following:
+
+- An Azure subscription with credits
+- A Developement environment
+
+For the Azure subscription, you can use the MSDN subscription or AIRS credits that is available for Microsoft FTEs.
+
+As for the developer environment, for the demo envioronment, you can create a Windows 10 vurtual machine in Azure.
+
+To setup the Dev environment we will need the following tools:
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/downloads)
+- [Docker Desktop](https://docs.docker.com/desktop/windows/release-notes/3.x/#docker-desktop-352)
+
+You can individually download and install the tools or use [Chocolatey](https://docs.chocolatey.org/en-us/choco/setup#install-with-cmd.exe) package to install using command line.
+The command to install using cmd line is:
+```bash
+choco install git vscode docker-desktop
+```
+
+**Note:**
+
+<pre>Docker desktop v4 (latest) has a bug. This is why the recommended version to use is 3.5.2.</pre>
+
+Post installation of tools, clone this repository to a directory within the VM using the Powershell command:
+```bash
+git clone https://github.com/rjnmylife/demo_landingzone.git
+```
+Next, go to the folder where you cloned the repository, right-click and open with VSCode.
+
+Install the following extensions within VSCode:
+- Remote-Containers
+- Remote-WSL
+- Hashicorp Terraform
+
+Make sure that Docker desktop is running before proceeding to the next step.
+
+Next, click on the green button on the bottom left corner of the VSCode window, and click on 'Reopen in container'. 
+
+The VSCode extension will take a few seconds to load the [docker-compose.yml](./.devcontainer/docker-compose.yml) file having the container image details. 
+
+VSCode will then pull the image and build the container with the rover image we have mentioned within [docker-compose.yml](./.devcontainer/docker-compose.yml) file.
+This process usually takes several minutes when setting up the container for the repository the first time.
+
+Next, we can open a new Bash terminal within VSCode and run the following command to login to Azure:
+```bash
+rover login
+
+#Or use az:
+
+az login --tenant "tenant-id"
+az account set --subscription "subscription-id"
+```
+To proceed, follow the [Deployment steps](./contoso/deployment_commands.md) listed here.
+
+Reference to project [Wiki](https://github.com/rjnmylife/demo_landingzone/wiki).
+
+
 
 
 

@@ -35,7 +35,6 @@ Set-up the launchpads for level0 to level4
 
 ```bash
 
-target_subscription="072bae4a-22d7-4db2-bd6e-372cca8b8842"
 
 rover \
   -lz /tf/caf/landingzones/caf_launchpad \
