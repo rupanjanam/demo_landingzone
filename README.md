@@ -18,7 +18,7 @@ the following components:
 
 | Level | Type of resources |
 | --- | --------------------- |
-| Level 0 | - Components for manual to automation; eg: storage of Terraform state files, DevOps integration <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
+| Level 0 | - Components for manual to automation;<br/> eg: storage of Terraform state files, DevOps integration <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
 | Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services |
 | Level 2 | - Networking resources |
 | Level 3 | - Application hosting servers<br/> - Database layer |
