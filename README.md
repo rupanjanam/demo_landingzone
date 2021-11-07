@@ -13,8 +13,17 @@ A Platform Landing zone is created to set up the Azure Platform components, whic
 
 The application infrastructure (compute resources, databases etc.), is deployed after the platform landing zone is created. We follow an iterative agile approach to create the baseline platform landing zone, prior to creating the application hosting infrastructure.
 
-For ease of operations, we categorize the Platform landing zone into 'levels'. 
+For ease of operations, we categorize the Enterprise-scale Landing zone into 'levels'. Broadly levels comprise of (but not limited to)
+the following components:
 
 | Level | Type of resources |
 | --- | --------------------- |
-| Level 0 | - Components for manual to automation; eg: storage of Terraform state files, DevOps integration | 
+| Level 0 | - Components for manual to automation; eg: storage of Terraform state files, DevOps integration <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
+| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services |
+| Level 2 | - Networking resources |
+| Level 3 | - Application hosting servers<br/> - Database layer |
+| Level 4 | - Application layer |
+
+
+
+ 
