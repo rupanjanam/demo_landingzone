@@ -14,8 +14,7 @@ A Platform Landing zone is created to set up the Azure Platform components, whic
 The application infrastructure (compute resources, databases etc.), is deployed after the platform landing zone is created. We follow an iterative agile approach to create the baseline platform landing zone, prior to creating the application hosting infrastructure.
 
 For ease of operations, we categorize the Platform landing zone into 'levels'. 
-- Level 0 comprises of components supporting the 'manual towards automation' transition of DevOps. It comprises of Terraform supporting infrastructure for 
 
 | Level | Type of resources |
 | --- | --------------------- |
-| Level 0 | [- Components for manual to automation; eg: storage of Terraform state files, DevOps integration] | 
+| Level 0 | - Components for manual to automation; eg: storage of Terraform state files, DevOps integration | 
