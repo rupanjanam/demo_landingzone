@@ -32,9 +32,9 @@ the following components:
 
 | Level | Type of resources |
 | --- | --------------------- |
-| Level 0 | - Components for manual to automation;<br/> eg: storage of Terraform state files <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
-| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services<br/>- DevOps integration |
-| Level 2 | - Networking resources |
+| [Level 0](./contoso/level0/launchpad/readme.md) | - Components for manual to automation;<br/> eg: storage of Terraform state files <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
+| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services<br/>- DevOps integration<br/> - Links:<br/> <pre>a. [Level 1 Enterprise Sclale Landing Zone](./contoso/level1/eslz_v1/readme.md)<br/>b. [Level 1 Shared Services](./contoso/level1/shared_services/readme.md) </pre> |
+| [Level 2](./contoso/level2/networking/vwan/readme.md) | - Networking resources |
 | Level 3 | - Application hosting servers<br/> - Database layer |
 | Level 4 | - Application layer |
 

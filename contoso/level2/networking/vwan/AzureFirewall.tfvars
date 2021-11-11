@@ -1,16 +1,3 @@
-# global_settings = {
-#   default_region = "region1"
-#   regions = {
-#     region1 = "southeastasia"
-#   }
-# }
-
-/* resource_groups = {
-  dmz = {
-    name = "gcc-git-con-dmz-dev-sea-01"
-  }
-
-} */
 
 vnets = {
   vnet3 = {
@@ -29,17 +16,7 @@ vnets = {
   }
 }
 
-/* public_ip_addresses = {
-  pip1 = {
-    name               = "gcc-git-con-dmz-dev-sea-01"
-    resource_group_key = "hub_re1"
-    sku                = "Standard" # must be 'Standard' SKU
-    # Standard SKU Public IP Addresses that do not specify a zone are zone redundant by default.
-    allocation_method       = "Static"
-    ip_version              = "IPv4"
-    idle_timeout_in_minutes = "4"
-  }
-} */
+
 
 azurerm_firewalls = {
   firewall1 = {
@@ -61,15 +38,7 @@ azurerm_firewalls = {
         public_ip_count = 1
       }
     }
-    /* public_ips = {
-      ip1 = {
-        name          = "pip1"
-        public_ip_key = "pip1"
-        vnet_key      = "vnet3"
-        subnet_key    = "AzureFirewallSubnet"
-        # lz_key = "lz_key"
-      }
-    } */
+    
   }
 }
 

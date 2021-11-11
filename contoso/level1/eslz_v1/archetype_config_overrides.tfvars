@@ -3,14 +3,14 @@ archetype_config_overrides = {
   root = {
     archetype_id = "contoso"
     parameters = {
-      "contoso-allowed-locations" = {
+      "contoso-allow-location" = {
         "listOfAllowedLocations" = {
           values = [
             "southeastasia"
           ]
         }
       }
-      "contoso-rg-locations" = {
+      "contoso-rg-location" = {
         "listOfAllowedLocations" = {
           values = [
             "southeastasia"
@@ -25,6 +25,20 @@ archetype_config_overrides = {
           resource_type = "log_analytics"
           resource_key  = "sea_logs_region1"
           attribute_key = "id"
+        }
+      }
+      "Deploy-ASC-Defender" = {
+        "logAnalytics" = {
+          # value = "resource_id"
+          lz_key        = "caf_foundations_sharedservices"
+          output_key    = "diagnostics"
+          resource_type = "log_analytics"
+          resource_key  = "sea_logs_region1"
+          attribute_key = "id"
+        }
+        "emailSecurityContact" = {
+          # value = "resource_id"
+          value = "sean.lok@grabtaxi.com"
         }
       }
       "Deploy-VM-Monitoring" = {
@@ -45,7 +59,7 @@ archetype_config_overrides = {
           attribute_key = "id"
         }
       }
-      "contoso-Nsg-FlowLogs-to-LA" = {
+      "contoso-Nsg-FlowLogs-LA" = {
         # "retention" = {
         #   value = 1
         # }
@@ -104,7 +118,7 @@ archetype_config_overrides = {
         }
       }
      
-      "contoso-Deploy-Def-OSS-DB" = {
+      "contoso-Def-OSSDB" = {
         "pricingTier" = {
           value = "Standard"
         }
