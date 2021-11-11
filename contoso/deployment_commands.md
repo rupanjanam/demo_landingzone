@@ -102,9 +102,9 @@ rover \
   -lz /tf/caf/landingzones/caf_solution \
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription ${target_subscription} \
-  -var-folder /tf/caf/gcc/level2/networking/vwan \
+  -var-folder /tf/caf/contoso/level2/networking/vwan \
   -tfstate caf_networking_vwan.tfstate \
-  -env ${environment} \
+  -env ${caf_env} \
   -level level2 \
   -a [plan|apply|destroy]
 
