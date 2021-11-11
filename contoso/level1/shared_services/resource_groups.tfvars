@@ -1,7 +1,7 @@
 resource_groups = {
 
   #
-  # Log Analytics resource groups
+  # Log Analytics resource group
   #
 
   la_sea_rg_01 = {
@@ -10,17 +10,15 @@ resource_groups = {
     tags   = {}
   }
 
-  la_sea_rg_asc_export = {
-    name   = "caf-la-asc"
-    region = "region1"
-    tags   = {}
-  }
+# Storage Account resource group
 
-  network_watcher_sea_rg = {
-    name   = "network-watcher-sea"
+  stg_contoso_sea_rg = {
+    name   = "stg-contoso-rg-sea"
     region = "singapore"
     tags   = {}
   }
+
+# Event Hub resource group
 
   ev_sea_rg_01 = {
     name   = "caf-ev-sea"

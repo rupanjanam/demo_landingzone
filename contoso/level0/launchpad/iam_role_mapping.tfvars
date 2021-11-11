@@ -25,45 +25,7 @@ role_mapping = {
         }
       }
     }
-    resource_groups = {
-      level0 = {
-        "Reader" = {
-          managed_identities = {
-            keys = [
-              "subscription_creation_platform"
-            ]
-          }
-        }
-      }
-      level1 = {
-        "Reader" = {
-          managed_identities = {
-            keys = [
-              "subscription_creation_platform"
-            ]
-          }
-        }
-      }
-      level3 = {
-        "Reader" = {
-          managed_identities = {
-            keys = [
-              "subscription_creation_landingzones"
-            ]
-          }
-        }
-      }
-      security = {
-        "Reader" = {
-          managed_identities = {
-            keys = [
-              "subscription_creation_platform",
-              "subscription_creation_landingzones"
-            ]
-          }
-        }
-      }
-    }
+    
     storage_accounts = {
       level0 = {
         "Storage Blob Data Contributor" = {
@@ -82,8 +44,8 @@ role_mapping = {
         "Storage Blob Data Reader" = {
           managed_identities = {
             keys = [
-              "level1",
-              "subscription_creation_platform"
+              "level1"
+              
             ]
           }
         }
@@ -91,7 +53,7 @@ role_mapping = {
         "Storage Account Key Operator Service Role" = {
           managed_identities = {
             keys = [
-              "subscription_creation_platform"
+              
             ]
           }
         }
@@ -109,15 +71,15 @@ role_mapping = {
           }
           managed_identities = {
             keys = [
-              "level1",
-              "subscription_creation_platform"
+              "level1"
+              
             ]
           }
         }
         "Storage Account Key Operator Service Role" = {
           managed_identities = {
             keys = [
-              "subscription_creation_platform"
+             
             ]
           }
         }
@@ -145,13 +107,13 @@ role_mapping = {
         }
         "Storage Blob Data Reader" = {
           managed_identities = {
-            keys = ["level3", "subscription_creation_landingzones"]
+            keys = ["level3"]
           }
         }
         "Storage Account Key Operator Service Role" = {
           managed_identities = {
             keys = [
-              "subscription_creation_landingzones"
+              
             ]
           }
         }
@@ -167,13 +129,13 @@ role_mapping = {
             keys = ["user"]
           }
           managed_identities = {
-            keys = ["level3", "subscription_creation_landingzones"]
+            keys = ["level3"]
           }
         }
         "Storage Account Key Operator Service Role" = {
           managed_identities = {
             keys = [
-              "subscription_creation_landingzones"
+              
             ]
           }
         }

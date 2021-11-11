@@ -28,18 +28,5 @@ managed_identities = {
     name               = "CAF-launchpad-level4-msi"
     resource_group_key = "security"
   }
-  subscription_creation_platform = {
-    # Used to create the platform Azure subscriptions and assign the them at the Enterprise Scale management group's root and below
-    name               = "CAF-subscription-creation-platform"
-    resource_group_key = "security"
-  }
-  subscription_creation_landingzones = {
-    # Used to create the landingzones Azure subscriptions and assign the them at the Enterprise Scale management group's landingzone and below
-    name               = "CAF-subscription-creation-landingzones"
-    resource_group_key = "security"
-  }
-  landingzones_service_user = {
-    name               = "CAF-landingzones-service-user"
-    resource_group_key = "security"
-  }
+  
 }

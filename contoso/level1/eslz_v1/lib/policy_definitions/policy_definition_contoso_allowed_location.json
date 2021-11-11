@@ -1,6 +1,6 @@
 {
   "type": "Microsoft.Authorization/policyDefinitions",
-  "name": "contoso-allowed-locations",
+  "name": "contoso-allow-location",
   "apiVersion": "2020-09-01",
   "properties": {
     "displayName": "contoso allowed locations",

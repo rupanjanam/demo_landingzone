@@ -1,3 +1,15 @@
+## Introduction
+This repository and its contents is meant for learning how we can use Microsoft well-architected framework to create a landing-zone. The skills required to use this repository are:
+- A basic understanding of DevOps
+- Git flow and Git commands
+- Some familiarity with languages such as Terraform, Az CLI commands
+- Azure Resource Manager 
+
+Tools and Technologies required:
+- An Azure Subscription with Owner permission
+- A PC/laptop/Virtual Machine with atleast 16 GB of RAM (Windows) Or A Macbook Or a Linux/Ubuntu machine
+- (Optional) To deploy Level 1 ESLZ, Global Administrator permission will be required on the Azure AD Tenant hosting the Subscription in use.
+
 ## What is an Enterprise scale Azure Landing zone?
 An Enterprise scale landing zone is an Azure environment which is created to quickly onboard applications. A landing zone can be broadly categorized as follows: Platform landing zone and Application landing zone.
 
@@ -54,7 +66,7 @@ To start adopting your first landing zone in Azure, you will need the following:
 
 For the Azure subscription, you can use the MSDN subscription or AIRS credits that is available for Microsoft FTEs.
 
-As for the developer environment, for the demo envioronment, you can create a Windows 10 vurtual machine in Azure.
+As for the developer environment, for the demo envioronment, you can create a Windows 10 virtual machine in Azure.
 
 To setup the Dev environment we will need the following tools:
 

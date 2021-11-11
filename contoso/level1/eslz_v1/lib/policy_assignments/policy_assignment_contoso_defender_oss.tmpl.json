@@ -1,5 +1,5 @@
 {
-  "name": "contoso-Deploy-Def-OSS-DB",
+  "name": "contoso-Def-OSSDB",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {

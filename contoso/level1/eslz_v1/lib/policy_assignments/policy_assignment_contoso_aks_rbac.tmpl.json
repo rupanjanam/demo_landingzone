@@ -1,5 +1,5 @@
 {
-  "name": "contoso-Deny-AKSWithoutRBAC",
+  "name": "contoso-Deny-AKSRBAC",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {

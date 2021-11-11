@@ -1,5 +1,5 @@
 {
-  "name": "contoso-kv-pruge-protect",
+  "name": "contoso-kv-purge",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {

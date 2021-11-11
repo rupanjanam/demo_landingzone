@@ -18,10 +18,7 @@ keyvault_access_policies = {
       managed_identity_key = "level1"
       secret_permissions   = ["Get"]
     }
-    subscription_creation_platform = {
-      managed_identity_key = "subscription_creation_platform"
-      secret_permissions   = ["Get"]
-    }
+    
   }
   # A maximum of 16 access policies per keyvault
   level2 = {
@@ -44,10 +41,7 @@ keyvault_access_policies = {
       managed_identity_key = "level3"
       secret_permissions   = ["Get"]
     }
-    subscription_creation_landingzones = {
-      managed_identity_key = "subscription_creation_landingzones"
-      secret_permissions   = ["Get"]
-    }
+    
   }
   # A maximum of 16 access policies per keyvault
   level4 = {

@@ -2,7 +2,7 @@
 
 ## Clone the CAF Landing zones modules
 ```bash
-lz_branch="2108.0"
+lz_branch="2111.0"
 git clone --branch ${lz_branch} https://github.com/Azure/caf-terraform-landingzones.git /tf/caf/landingzones
 
 # Or refresh an existing clone
@@ -70,7 +70,13 @@ rover \
 ### Enterprise Scale
 
 ```bash
+## Elevate Global Admin and Subscription Owner to User Access Administrator:
 
+az rest --method post --url "/providers/Microsoft.Authorization/elevateAccess?api-version=2016-07-01"
+
+# Check Access:
+
+az role assignment list --role "User Access Administrator" --scope "/"
 
 rover \
   -lz /tf/caf/landingzones/caf_solution/add-ons/caf_eslz \

@@ -1,26 +1,13 @@
 {
     "contoso_landing_zones": {
         "policy_assignments": [
-            "Deny-IP-Forwarding",
-            "Deny-RDP-From-Internet",
-            "Deny-Storage-http",
-            "Deploy-AKS-Policy",
-            "Deploy-SQL-DB-Auditing",
-            "Deploy-VM-Backup",
-            "Deploy-SQL-Security",
-            "Deny-Priv-Escalation-AKS",
-            "Deny-Priv-Containers-AKS",
-            "contoso-no-public-ip-nics",
-            "Deny-http-Ingress-AKS",
-            "Deny-PublicIP",
-            "Deny-Subnet-Without-Nsg",
-            "contoso-Deny-AKSWithoutRBAC"
+           
         ],
         "policy_definitions": [
         ],
         "policy_set_definitions": [],
         "role_definitions": [
-            "contoso-system-landingzone-service"
+            
         ],
         "archetype_config": {
             "parameters": {},

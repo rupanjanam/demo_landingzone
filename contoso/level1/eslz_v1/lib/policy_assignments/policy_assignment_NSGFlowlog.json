@@ -1,5 +1,5 @@
 {
-  "name": "contoso-Nsg-FlowLogs-to-LA",
+  "name": "contoso-Nsg-FlowLogs-LA",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
