@@ -11,7 +11,7 @@ role_mapping = {
         "Owner" = {
           object_ids = {
             // Azure AD Group caf-launchpad-maintainers-rw
-            keys = [] // e2be2124-5552-4fa8-8655-1d7a5844a54c
+            keys = [] // 
           }
           managed_identities = {
             keys = [

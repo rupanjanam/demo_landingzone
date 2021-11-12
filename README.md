@@ -33,7 +33,7 @@ the following components:
 | Level | Type of resources |
 | --- | --------------------- |
 | [Level 0](./contoso/level0/launchpad/readme.md) | - Components for manual to automation;<br/> eg: storage of Terraform state files <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
-| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services<br/>- DevOps integration<br/> - Links:<br/> <pre>a. [Level 1 Enterprise Sclale Landing Zone](./contoso/level1/eslz_v1/readme.md)<br/>b. [Level 1 Shared Services](./contoso/level1/shared_services/readme.md) </pre> |
+| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services<br/>- DevOps integration<br/> - Links:<br/> <pre>a. [Level 1 Enterprise Scale Landing Zone](./contoso/level1/eslz_v1/readme.md)<br/>b. [Level 1 Shared Services](./contoso/level1/shared_services/readme.md) </pre> |
 | [Level 2](./contoso/level2/networking/vwan/readme.md) | - Networking resources |
 | Level 3 | - Application hosting servers<br/> - Database layer |
 | Level 4 | - Application layer |
@@ -66,7 +66,7 @@ To start adopting your first landing zone in Azure, you will need the following:
 
 For the Azure subscription, you can use the MSDN subscription or AIRS credits that is available for Microsoft FTEs.
 
-As for the developer environment, for the demo envioronment, you can create a Windows 10 virtual machine in Azure.
+As for the developer environment, for the demo envioronment, you can create a Windows 10 virtual machine in Azure. We need an Azure Windows 10 VM that allows Hyper-V feature; certain SKUs like D4_v3, D8_v3 etc. allows enabling Hyper-V.
 
 To setup the Dev environment we will need the following tools:
 
