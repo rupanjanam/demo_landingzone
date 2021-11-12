@@ -44,7 +44,7 @@ rover \
     -launchpad \
     -env ${caf_env} \
     -level level0 \
-    -a plan
+    -a [plan|apply|destroy]
 
 ```
 
@@ -63,7 +63,7 @@ rover \
   -tfstate caf_foundations_sharedservices.tfstate \
   -env ${caf_env} \
   -level level1 \
-  -a plan
+  -a [plan|apply|destroy]
 
 ```
 
@@ -87,7 +87,7 @@ rover \
   -env ${caf_env} \
   -level level1 \
   -parallelism 50 \
-  -a plan
+  -a [plan|apply|destroy]
 
 ```
 
