@@ -1,7 +1,7 @@
 custom_landing_zones = {
 
   contoso-devops = {
-    display_name               = "Devops"
+    display_name               = "DevOps"
     parent_management_group_id = "contoso-platform"
     subscription_ids = []
     subscriptions = {}
