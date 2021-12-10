@@ -35,7 +35,7 @@ the following components:
 | Level | Type of resources |
 | --- | --------------------- |
 | [Level 0](./contoso/level0/launchpad/readme.md) | - Components for manual to automation;<br/> eg: storage of Terraform state files <br/> - MSI, Service principals <br/> - Azure AD Groups <br/> - RBAC permissions <br/> - Secrets storage |
-| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription organization<br/>- Custom Azure RBAC roles<br/>- Shared services<br/>- DevOps integration<br/> - In this repository we are creating the follwoing:<br/> <pre>a. [Level 1 Enterprise Scale Landing Zone](./contoso/level1/eslz_v1/readme.md)<br/>b. [Level 1 Shared Services](./contoso/level1/shared_services/readme.md)<br/>c. Level 1 GitOps with Gitlab<br/>c. Level 1 EA Subscriptions Creation </pre> |
+| Level 1 | - Management Groups <br/>- Azure Policies<br/>- Subscription creation and organization<br/>- Custom Azure RBAC roles<br/>- Shared services<br/>- DevOps integration<br/> - In this repository we are creating the follwoing:<br/> <pre>a. [Level 1 Enterprise Scale Landing Zone](./contoso/level1/eslz_v1/readme.md)<br/>b. [Level 1 Shared Services](./contoso/level1/shared_services/readme.md)<br/>c. Level 1 GitOps with Gitlab<br/>c. Level 1 EA Subscriptions Creation </pre> |
 | [Level 2](./contoso/level2/networking/vwan/readme.md) | - Networking resources |
 | Level 3 | - Application hosting servers<br/> - Database layer |
 | Level 4 | - Application layer |
