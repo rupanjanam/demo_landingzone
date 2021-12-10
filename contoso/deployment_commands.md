@@ -127,7 +127,7 @@ rover \
 ```
 
 ## GitLab Integration
-#### Steps to integrate with Gitlab can only be followed after this repository code is copied and pushed to your https://gitlab.com or Gitlab server repositories.
+#### Steps to integrate with Gitlab can only be followed after this repository code is copied and pushed to your https://gitlab.com or Gitlab server repositories. Note that if its a hosted Gitlab server, the server will need to have network connectivity to Azure and the VNET that will be hosting the AKS runners deployed in the next steps.
 
 ### AKS construction set
 Set-up the aks cluster
