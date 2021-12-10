@@ -126,7 +126,7 @@ rover \
 
 ```
 
-## GitLab Integration- 
+## GitLab Integration
 #### Steps to integrate with Gitlab can only be followed after this repository code is copied and pushed to your https://gitlab.com or Gitlab server repositories.
 
 ### AKS construction set
