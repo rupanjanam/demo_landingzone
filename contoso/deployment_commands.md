@@ -133,7 +133,7 @@ rover \
 Set-up the aks cluster
 
 ```bash
-
+# Creates a private AKS cluster to host Gitlab CI/CD runners.
 rover \
   -lz /tf/caf/landingzones/caf_solution \
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
@@ -146,11 +146,12 @@ rover \
 
 ```
 
-NOTE -> The following steps must be executed from the private vnet (jumbox, vpn, line of sight)s. This is because we deployed a private AKS cluster, to access the cluster we need to access through the jumpbox. However, if the cluster deployed is private, you can continue to run the next commands from the current VM environment itself.
+<b>NOTE :-</b> The following steps must be executed from the private vnet (jumbox, vpn, line of sight)s. This is because we deployed a private AKS cluster, to access the cluster we need to access through the jumpbox. However, if the cluster deployed is public, you can continue to run the next commands from the current VM environment itself.
 
 ### AKS Secure Baseline
 
 ```bash
+# Installs security configurations into AKS Cluster.
 
 rover \
   -lz /tf/caf/landingzones/caf_solution/add-ons/aks-secure-baseline \
@@ -177,7 +178,7 @@ rover \
 ### AKS AAD Pod Identity Binding
 
 ```bash
-
+# Binds the MSI identities to the Gitlab pod runners on AKS.
 rover \
   -lz /tf/caf/landingzones/caf_solution/add-ons/aad-pod-identity \
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
@@ -210,7 +211,11 @@ rover \
 
 ```
 #### Post successful integration of Gitlab with the AKS pod hosted runners, the runners will start appearing on the Gitlab Settings page on: Settings-> CI/CD-> Runners.
-#### The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. The master pipeline references child pipelines; learn more about [master-child pipelines in Gitlab](https://docs.gitlab.com/ee/ci/pipelines/parent_child_pipelines.html). To learn more about Gitlab CI/CD pipelines follow [this link](https://docs.gitlab.com/ee/ci/quick_start/).
+#### The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. 
+
+#### The master pipeline references child pipelines; learn more about [master-child pipelines in Gitlab](https://docs.gitlab.com/ee/ci/pipelines/parent_child_pipelines.html). 
+
+#### To learn more about Gitlab CI/CD pipelines follow [this link](https://docs.gitlab.com/ee/ci/quick_start/).
 
 ## Level2
 
