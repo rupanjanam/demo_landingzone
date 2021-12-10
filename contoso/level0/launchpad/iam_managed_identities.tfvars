@@ -28,5 +28,10 @@ managed_identities = {
     name               = "CAF-launchpad-level4-msi"
     resource_group_key = "security"
   }
+  subscription_creation_platform = {
+    # Used to create the platform Azure subscriptions and assign the them at the Enterprise Scale management group's root and below
+    name               = "CAF-subscription-creation-platform"
+    resource_group_key = "security"
+  }
   
 }

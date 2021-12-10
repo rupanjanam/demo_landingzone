@@ -38,7 +38,7 @@ archetype_config_overrides = {
         }
         "emailSecurityContact" = {
           # value = "resource_id"
-          value = "sean.lok@grabtaxi.com"
+          value = "sean.lok@contosotaxi.com"
         }
       }
       "Deploy-VM-Monitoring" = {

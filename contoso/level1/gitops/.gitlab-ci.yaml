@@ -1,0 +1,37 @@
+workflow:
+  rules:
+    - if: '$CI_MERGE_REQUEST_ID'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"' #https://docs.gitlab.com/ee/ci/yaml/README.html#common-if-clauses-for-rules
+    - if: '$CI_PIPELINE_SOURCE =~ /^trigger|pipeline|web|api$/'
+    - if: '$RUN_COMPONENT == "gitops"'
+
+stages:
+  - gitops_aks
+  - gitops_aks_secure_baseline
+  - gitops_aks_aad_pod_identity
+  - gitops_gitlabs_charts
+
+gitops_aks:
+  stage: gitops_aks
+  trigger:
+    include: 'contoso/level1/gitops/aks/.gitlab-ci.yaml'
+    strategy: depend
+
+gitops_aks_secure_baseline:
+  stage: gitops_aks_secure_baseline
+  trigger:
+    include: 'contoso/level1/gitops/aks-secure-baseline_v2/.gitlab-ci.yaml'
+    strategy: depend
+
+gitops_aks_aad_pod_identity:
+  stage: gitops_aks_aad_pod_identity
+  trigger:
+    include: 'contoso/level1/gitops/aad-pod-identity/.gitlab-ci.yaml'
+    strategy: depend
+
+gitops_gitlabs_charts:
+  stage: gitops_gitlabs_charts
+  trigger:
+    include: 'contoso/level1/gitops/charts/.gitlab-ci.yaml'
+    strategy: depend
+

@@ -1,0 +1,20 @@
+checkInterval: 3
+concurrent: 4
+gitlabUrl: https://gitlab.com/
+image: crcafroverepi.azurecr.io/gitlab-runner:alpine-v13.10.0
+rbac:
+  clusterWideAccess: false
+  create: true
+  enabled: true
+resources: {}
+runnerRegistrationToken: _WAqKdmj_xe5fJ3sSKyz
+runners:
+  builds: {}
+  helpers:
+    image: crcafroverepi.azurecr.io/gitlab-runner-helper:x86_64-54944146
+  image: crcafroverepi.azurecr.io/ubuntu:20.0
+  privileged: true
+  services: {}
+  podLabels:
+    aadpodidbinding: podmi-caf-rover-platform-level0
+  tags: "CAF_LEVEL_0,contosotestmaster"

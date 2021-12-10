@@ -47,6 +47,26 @@ rover \
     -a [plan|apply|destroy]
 
 ```
+### Subscription role creation delegations (only execute if you have an EA)
+
+#  Get billing roles definitions
+az rest --method GET --url https://management.azure.com/providers/Microsoft.Billing/billingAccounts/7516237/enrollmentAccounts/279001/billingRoleDefinitions?api-version=2019-10-01-preview --query "value[?properties.roleName=='Enrollment account subscription creator'].{id:id}" -o tsv
+
+# Run the below role delegation command with an EA Account Owner account
+
+```bash
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution \
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level0/billing_subscription_role_delegations \
+  -tfstate billing_subscription_role_delegations.tfstate \
+    -launchpad \
+    -env ${caf_env} \
+    -level level0 \
+    -a plan
+```
 
 ## Level 1
 
@@ -90,6 +110,103 @@ rover \
   -a [plan|apply|destroy]
 
 ```
+#### Enterprise Agreement subscriptions - to be created only when you have an EA agreement 
+```bash
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution \
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level1/subscriptions \
+  -tfstate platform_subscriptions_contosotestmaster.tfstate \
+  -env ${caf_env} \
+  -level level1 \
+  -a plan
+
+```
+
+### GitLab Integration- 
+# Steps to integrate with Gitlab can only be followed after this repository code is copied and pushed to your https://gitlab.com or Gitlab server repositories.
+
+# AKS construction set
+Set-up the aks cluster
+
+```bash
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution \
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level1/gitops/aks \
+  -tfstate caf_gitops_aks.tfstate \
+  -env ${caf_env} \
+  -level level1 \
+  -a plan
+
+```
+
+NOTE -> The following steps must be executed from the private vnet (jumbox, vpn, line of sight)s
+
+#### AKS Secure Baseline
+
+```bash
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution/add-ons/aks-secure-baseline \
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level1/gitops/aks-secure-baseline \
+  -tfstate caf_gitops_aks_secure_baseline.tfstate \
+  -env ${caf_env} \
+  -level level1 \
+  -a plan
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution/add-ons/aks_secure_baseline_v2 \
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level1/gitops/aks-secure-baseline_v2 \
+  -tfstate caf_gitops_aks_secure_baseline_v2.tfstate \
+  -env ${caf_env} \
+  -level level1 \
+  -a plan
+
+```
+
+#### AKS AAD Pod Identity Binding
+
+```bash
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution/add-ons/aad-pod-identity \
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level1/gitops/aad-pod-identity \
+  -tfstate caf_gitops_aks_aad_pod_identity.tfstate \
+  -env ${caf_env} \
+  -parallelism=1 \
+  -level level1 \
+  -a plan
+
+```
+
+#### Deploy Gitlab runners
+
+```bash
+
+rover \
+  -lz /tf/caf/landingzones/caf_solution/add-ons/helm-charts\
+  -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
+  -target_subscription ${target_subscription} \
+  -var-folder /tf/caf/contoso/level1/gitops/charts \
+  -tfstate caf_gitops_aks_gitlab_runners.tfstate \
+  -env ${caf_env} \
+  -level level1 \
+  -a plan
+
+```
+# Post successful integration of Gitlab with the AKS pod hosted runners, the runners will start appearing on the Gitlab Settings page on: Settings-> CI/CD-> Runners.
+# The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. 
 
 ## Level2
 
