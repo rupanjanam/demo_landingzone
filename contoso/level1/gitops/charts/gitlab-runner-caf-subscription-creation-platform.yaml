@@ -7,7 +7,7 @@ rbac:
   create: true
   enabled: true
 resources: {}
-runnerRegistrationToken: _WAqKdmj_xe5fJ3sSKyz
+runnerRegistrationToken: xxxxxxxxxxxxxxxxxxxxxxx
 runners:
   builds: {}
   helpers:

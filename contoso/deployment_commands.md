@@ -192,6 +192,9 @@ rover \
 
 #### Deploy Gitlab runners
 
+# Copy and replace your Gitlab URL and Runner Registration token in the gitlab-runner-caf-platform yaml files in contoso-> level1-> gitops-> charts.
+# Update the image in the gitlab-runner-caf-platform yaml file as per requirement.
+
 ```bash
 
 rover \
