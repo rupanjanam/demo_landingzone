@@ -210,7 +210,7 @@ rover \
 
 ```
 #### Post successful integration of Gitlab with the AKS pod hosted runners, the runners will start appearing on the Gitlab Settings page on: Settings-> CI/CD-> Runners.
-#### The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. 
+#### The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. The master pipeline references child pipelines; learn more about [master-child pipelines in Gitlab](https://docs.gitlab.com/ee/ci/pipelines/parent_child_pipelines.html). To learn more about Gitlab CI/CD pipelines follow [this link](https://docs.gitlab.com/ee/ci/quick_start/).
 
 ## Level2
 
