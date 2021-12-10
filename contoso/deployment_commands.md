@@ -49,10 +49,11 @@ rover \
 ```
 ### Subscription role creation delegations (only execute if you have an EA)
 
-#  Get billing roles definitions
+####  Get billing roles definitions
+```
 az rest --method GET --url https://management.azure.com/providers/Microsoft.Billing/billingAccounts/7516237/enrollmentAccounts/279001/billingRoleDefinitions?api-version=2019-10-01-preview --query "value[?properties.roleName=='Enrollment account subscription creator'].{id:id}" -o tsv
-
-# Run the below role delegation command with an EA Account Owner account
+```
+#### Run the below role delegation command with an EA Account Owner account
 
 ```bash
 
@@ -110,7 +111,7 @@ rover \
   -a [plan|apply|destroy]
 
 ```
-#### Enterprise Agreement subscriptions - to be created only when you have an EA agreement 
+### Enterprise Agreement subscriptions - to be created only when you have an EA agreement 
 ```bash
 
 rover \
@@ -125,10 +126,10 @@ rover \
 
 ```
 
-### GitLab Integration- 
-# Steps to integrate with Gitlab can only be followed after this repository code is copied and pushed to your https://gitlab.com or Gitlab server repositories.
+## GitLab Integration- 
+#### Steps to integrate with Gitlab can only be followed after this repository code is copied and pushed to your https://gitlab.com or Gitlab server repositories.
 
-# AKS construction set
+### AKS construction set
 Set-up the aks cluster
 
 ```bash
@@ -145,9 +146,9 @@ rover \
 
 ```
 
-NOTE -> The following steps must be executed from the private vnet (jumbox, vpn, line of sight)s
+NOTE -> The following steps must be executed from the private vnet (jumbox, vpn, line of sight)s. This is because we deployed a private AKS cluster, to access the cluster we need to access through the jumpbox. However, if the cluster deployed is private, you can continue to run the next commands from the current VM environment itself.
 
-#### AKS Secure Baseline
+### AKS Secure Baseline
 
 ```bash
 
@@ -173,7 +174,7 @@ rover \
 
 ```
 
-#### AKS AAD Pod Identity Binding
+### AKS AAD Pod Identity Binding
 
 ```bash
 
@@ -190,10 +191,10 @@ rover \
 
 ```
 
-#### Deploy Gitlab runners
+### Deploy Gitlab runners
 
-# Copy and replace your Gitlab URL and Runner Registration token in the gitlab-runner-caf-platform yaml files in contoso-> level1-> gitops-> charts.
-# Update the image in the gitlab-runner-caf-platform yaml file as per requirement.
+#### Copy and replace your Gitlab URL and Runner Registration token in the gitlab-runner-caf-platform yaml files in contoso-> level1-> gitops-> charts.
+#### Update the image in the gitlab-runner-caf-platform yaml file as per requirement.
 
 ```bash
 
@@ -208,8 +209,8 @@ rover \
   -a plan
 
 ```
-# Post successful integration of Gitlab with the AKS pod hosted runners, the runners will start appearing on the Gitlab Settings page on: Settings-> CI/CD-> Runners.
-# The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. 
+#### Post successful integration of Gitlab with the AKS pod hosted runners, the runners will start appearing on the Gitlab Settings page on: Settings-> CI/CD-> Runners.
+#### The Gitlab pipeline definitions can then be created for each individual deployment. All the pipelines can be referenced by a master pipeline which is placed at the root of the repository. 
 
 ## Level2
 

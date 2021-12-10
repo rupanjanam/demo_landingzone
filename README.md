@@ -9,7 +9,7 @@ Tools and Technologies required:
 - An Azure Subscription with Owner permission
 - A PC/laptop/Virtual Machine with atleast 16 GB of RAM (Windows) Or A Macbook Or a Linux/Ubuntu machine
 - (Optional) To deploy Level 1 ESLZ, Global Administrator permission will be required on the Azure AD Tenant hosting the Subscription in use.
-- (Optional) To deploy the Level 1 GitOps, create an account in https://gitlab.com or [set up your own Gitlab VM](). Upload all the locally cloned code from this repository to Gitlab. The Level 1 GitOps enabled the integration of managed pipeline runners into Gitlab. 
+- (Optional) To deploy the Level 1 GitOps, create an account in https://gitlab.com or [set up your own Gitlab VM](https://docs.gitlab.com/ee/install/). You can create your own managed Gitlab VM in Azure using the instructions in this [URL](https://docs.gitlab.com/ee/install/azure/index.html). Upload all the locally cloned code from this repository to Gitlab. The Level 1 GitOps enables the integration of managed pipeline runners in Gitlab. The Level 1 GitOps is meant for enabling DevOps solution integration to enable complete automation with CI/CD based pipelines.
 - (Not required) The Level 1 Subscriptions can only be run if you have an Enterprise Agreement for Azure with Microsoft. The code is shared for reference to create a subscription in EA through automation.
 
 ## What is an Enterprise scale Azure Landing zone?
